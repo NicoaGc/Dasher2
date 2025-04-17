@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Site do jogo Dasher" />
+  <title>Dasher</title>
+  <link rel="Dasher logo" type="Dasher logo" href="site-do-jogo/Dasher__3_-removebg-preview.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <header class="header">
+    <div>
+      <a href="index.html" title="Home">
+        <img class="icon" src="Dasher__3_-removebg-preview.png" alt="Logo Dasher" title="Dasher o Melhor">
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html#index" title="Home">home</a>
+          </li>
+          <li>
+            <a href="sobre.html#sobre" title="Sobre">sobre</a>
+          </li>
+          <li>
+            <a href="galeria.html#galeria" title="Galeria de fotos">galeria de fotos</a>
+          </li>
+          <li>
+            <a href="contato.html#contato" title="Contato">contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="bannercontato">
+    <img src="Dasher fundo (4).png" alt="Dasher o game" title="Dasher o jogo">
+  </div>
+  <main id="contato">
+  <div class="contatodis">
+    <h1>
+      <span class="formh1">Formulário</span>
+    </h1>
+    </div>
+          <form id="form">
+            <label>Nome:</label>
+                <input type="text" id="nome">
+                <label>Email:</label>
+                <input email="text" id="email">
+                <label>Telefone:</label>
+                <input type="number" id="telefone">
+                <button type="button" id="botao">Enviar</button>
+          </form>
+         <script>
+            document.getElementById('botao').onclick = function(){
+                var nome = document.getElementById('nome').value;
+                var email = document.getElementById('email').value;
+                var telefone = document.getElementById('telefone').value;
+//Um regex (ou expressão regular) é um padrão usado para combinar, buscar ou manipular texto. Ele é amplamente utilizado em linguagens de programação, como JavaScript, Python, e outras, para validar entradas, encontrar padrões em strings ou substituir partes de texto.
+//Estrutura básica de um regex:
+//Delimitadores: Em JavaScript, um regex é delimitado por barras /.
+//Padrões: Define o que você está procurando (letras, números, caracteres especiais, etc.).
+//Modificadores (opcionais): Adicionam funcionalidades, como busca global (g) ou insensibilidade a maiúsculas/minúsculas (i).
+              var emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
+
+                if(nome == "" && email == "" && telefone == ""){
+                    alert("Preencha todos os campos!");
+                }else{
+                   
+                if(nome == ""){
+                    alert("Preencha o campo nome!");
+                }
+                if (email == "") {
+        alert("Preencha o campo email!");
+      } else if (!emailRegex.test(email)) {
+        alert("Digite um email válido!");
+
+                if(telefone == ""){
+                    alert("Preencha o campo telefone!");
+            }
+        }
+        if(nome!="" && emailRegex.test(email) && telefone!= ""){
+          alert("Formulário enviado com sucesso");
+        }
+      }
+    }
+         </script>
+  </main>
+  <footer>
+    <div>
+      <p>
+        <img class="logofooter" src="Dasher__3_-removebg-preview.png" alt="logo">
+      </p>
+      <p>
+        <a href="" class="icons"><i class='bx bxl-facebook'></i></a>
+        <a href="" class="icons"><i class='bx bxl-instagram'></i></a>
+      </p>
+      <p>
+        Site desenvolvido por Nicolas.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
