@@ -112,6 +112,15 @@ body {
   }
 }
 
+.game{
+  .jogo{
+    
+  }
+}
+iframe{
+  width: 100%; 
+  height: 500px; 
+}
 .icon {
   width: 105px;
 }
